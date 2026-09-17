@@ -1,0 +1,108 @@
+<!--
+
+Exercício 1 - Página de apresentação pessoal
+
+Crie uma página simples para se apresentar. O objetivo é praticar a imagem de fundo, o título principal e a centralização do conteúdo.
+
+Requisitos
+
+    Utilize uma imagem ocupando todo o fundo da página.
+    Adicione um título principal com a tag &lt;h1&gt;.
+    Escreva um parágrafo com uma breve apresentação.
+    Centralize o título horizontalmente.
+    Posicione o parágrafo no centro da página.
+    Escolha cores que mantenham o texto legível.
+    Comente no código onde o background e a centralização foram aplicados.
+
+Desafio
+
+Adicione uma segunda frase informando uma tecnologia ou área profissional que você gostaria de conhecer melhor.
+
+Antes de entregar
+    A página abre no navegador.
+    A imagem cobre toda a tela.
+    O título e o texto estão legíveis.
+
+!-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação</title>
+
+<style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+        /* Fonte externa */
+
+        body{
+
+            background-image: url("https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1030300/26950369fe4b03c2268620eb9815c8a246aa0b06/ss_26950369fe4b03c2268620eb9815c8a246aa0b06.1920x1080.jpg?t=1776125736");
+            /* Inclusão do url da imagem no background */    
+            background-repeat: no-repeat;
+            /* Não faz a imagem repetir */  
+            background-size: cover;
+            /* Imagem cobre toda o body do site */ 
+            background-position: center;
+            /* Imagem centralizada */ 
+            background-attachment: fixed;
+            /* Deixa a imagem fixada, sem alterar sua posição quando scrollar o site */ 
+            display: flex;
+            flex-direction: column;
+            /* Deixa o texto alinhado e em colunas, um abaixo do outro */ 
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            /* Centraliza todo o conteúdo (horizontal e vertical) e limita a altura do body pra mínimo 100%*/
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Comic Neue';
+            font-weight: 700;
+            /* Fonte comic sans + bold */
+            color: white;
+            margin-bottom: 20px;
+            /* Texto centralizado e espaçamento em baixo do texto */
+            text-shadow: 2px 2px 3px black;
+            /* Sombra no texto, 2px horizontal, 2px vertical, 3px de blur e cor preta */
+            transform: translate(0, -50px);
+            /* Coloca o texto 0.50 pixels pra cima */
+        }
+
+        .descricao-inicial {
+            text-align: center;
+            color: white;
+            font-family: 'Comic Neue';
+            font-weight: 700;
+            /* Fonte comic sans + bold */
+            background-color: rgba(0, 0, 0, 0.70);
+            border-radius: 10px;
+            padding: 10px;
+            max-width: 600px;
+            /* Texto centralizado e com borda transparente de 0.70, da cor preta */
+            transform: translate(0, -50px);
+            /* Coloca o texto 0.50 pixels pra cima */
+        }
+
+   </style>
+
+</head>
+
+<body>
+
+    <h1>Olá, meu nome é Nathan</h1>
+
+    <div class="descricao-inicial">
+        <p>
+        Sou estudante de ADS da Faculdade Municipal de Palhoça, atualmente cursando a 1ª fase. Pretendo trabalhar na área de programação e também, futuramente, na área de desenvolvimento de jogos, onde pretendo estudar mais sobre o assunto e criar, um dia, o meu próprio videogame.
+        </p>
+    </div>
+    
+</body>
+</html>
+
